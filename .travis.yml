@@ -2,5 +2,5 @@ language: node_js
 node_js:
   - 12
 script:
-  - npm install
+  - rm -f package-lock.json && npm install
   - npm run build

@@ -1,6 +1,5 @@
 const {app, BrowserWindow, ipcMain} = require('electron')
 const AmazonLogin = require('./modules/amazon-login');
-require('update-electron-app')();
 
 function createWindow() {
     const win = new BrowserWindow({
@@ -11,7 +10,7 @@ function createWindow() {
         }
     });
 
-    win.loadURL('http://localhost:4201/accounts')
+    win.loadURL('http://localhost:4201/')
 }
 
 app.whenReady().then(createWindow)

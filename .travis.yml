@@ -3,4 +3,5 @@ matrix:
     - os: linux
 
 script:
+  - npm install
   - npm run build

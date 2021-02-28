@@ -15,7 +15,7 @@ cache:
     - $HOME/.cache/electron-builder
 
 script:
-  - npm build
+  - npm run build
 before_cache:
   - rm -rf $HOME/.cache/electron-builder/wine
 

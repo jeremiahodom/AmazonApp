@@ -1,7 +1,6 @@
-matrix:
-  include:
-    - os: linux
-
+language: node_js
+node_js:
+  - 12
 script:
   - npm install
   - npm run build

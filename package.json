@@ -5,16 +5,34 @@
   "main": "index.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder --win"
+    "build-win": "electron-builder --win",
+    "build-mac": "electron-builder --mac",
+    "update": "electron-builder build --win --publish always"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^11.0.3",
+    "electron": "11.3.0",
     "electron-builder": "^22.9.1"
   },
   "dependencies": {
-    "otplib": "^12.0.1"
+    "electron-updater": "^4.3.8",
+    "otplib": "^12.0.1",
+    "sellercentral-amazon-sdk": "^1.0.0"
+  },
+  "build": {
+    "appId": "amazon.app",
+    "win": {
+      "publish": {
+        "provider": "github",
+        "token": "",
+        "private": true
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeremiahodom/AmzApp.git"
   }
 }
